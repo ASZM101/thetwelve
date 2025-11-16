@@ -117,6 +117,74 @@ label kannon8:
         "No":
             eight "We shall see..."
 
+label trial_8:       
+    $ score = 0
+    nine "lets see how much you know about the Sun. If you know enough, I might let you move on"
+    nine "first question, how old is the Sun?"
+    menu: 
+        "6-7 billion years":
+           "Incorrect. Lets try another" 
+
+        "4.5 billion years":
+            "CORRECT. Keep going!"
+            $ score +=1
+
+    nine "next question, how long does it take the sun to rotate on its axis?"
+    menu:
+        "27 days": 
+            nine"Correct, one more!"
+            $ score +=1
+        "18 days":
+            nine"Incorrect, Try one more time"
+
+    nine "last question, do you love Mr.Sun?"
+    menu:
+        "Yes":
+           nine"Thank you for not putting no. You don't know how many people put that answer"
+           $ score +=1 
+        "No":
+           nine "You humans are ungrateful. Moving on . . ."
+    if score>1:
+        nine "congratulations! You are able to pass to the next level!"
+    else:
+        "You have failed the test and will suffer a horrible fate. Sorry"
+
+
+label trial_9:
+    $ score=0
+    ten "What someone knows affects their decisions. Prove your knowledge in this test and show your worth"
+    ten "Your first question shall be . . . what is the definition of CAMADERIE?"
+    menu:
+        "social and friendly":
+            ten "Correct!!!Keep going"
+            $ score +=1
+        "formal and neutral":
+            ten "No, do better"
+    ten "Next question! What does ACCOLADE mean?"
+    menu:
+        "Harsh and mean":
+            ten"Incorrect; I am NOT accolade when I say that this is why your grades are so low"
+        "Praise and attention":
+            ten "Correct! Last one!"
+            $ score +=1
+    ten "The Big question . . . What does IDK mean?!"
+    menu:
+        "I Don't Know":
+            ten "Actually, I Don't Kare! HA . . Just kidding, I'll give it to you"
+            $ score +=1
+        "I Don't Kare":
+            ten "We need to talk about your spelling"
+    if score>1:
+        ten "Yes! You have made it passed my vocabulary quiz and may go forward on your journey"
+    else:
+        ten "Whomp Whomp. Your dead. Bye"
+    eleven "What we do in life must be based on strategy. Choose the best move in Chess"
+    twelve""
+
+    # This ends the game.
+
+    return
+
 # 9. Amaterasu (japanese Goddess of the Sun): Trivia about the Sun
 # 10. Seshat (egyptian goddess of writing): Vocabulary (SAT level)
 # 11. Minerva (roman goddess of strategy): Chess board, choose best move
