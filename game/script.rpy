@@ -181,15 +181,6 @@ label kannon8:
     eight "Welcome to the eighth labor. I am Kannon, the Japanese buddhist goddess of compassion and mercy."
     eight "Do you have compassion in your heart? Do you have love for others?"
     menu:
-    "Yes":
-         eight "We shall see."
-    "Yes?":
-        eight "You are  unsure of yourself. Nevertheless, we shall see."
-    "No":
-        eight "We shall see..."
-    eight "Welcome to the eighth labor. I am Kannon, the Japanese buddhist goddess of compassion and mercy."
-    eight "Do you have compassion in your heart? \n Do you have love for others?"
-    menu:
         "Yes":
             eight "We shall see."
         "Yes?":

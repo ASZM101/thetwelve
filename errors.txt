@@ -2,13 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 151: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "The scream"
-                ^
+File "game/script.rpy", line 183: menu statement expects a non-empty block.
+    menu:
+        ^
 
-File "game/script.rpy", line 163: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    '“The Last Supper” by Francis Newton Souza'
-                                           ^
+File "game/script.rpy", line 184: expected statement.
+    "Yes":
+         ^
+
+File "game/script.rpy", line 186: expected statement.
+    "Yes?":
+          ^
+
+File "game/script.rpy", line 188: expected statement.
+    "No":
+        ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Nov 16 01:39:10 2025
+Sun Nov 16 01:48:51 2025
