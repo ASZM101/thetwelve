@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 299: invalid syntax
-    twelve "Keep fighting"
-                   ^^^^^^^^^^^^^^^
+File "game/script.rpy", line 49: multiple at clauses are prohibited.
+    show artemis welcome at scale(2) at truecenter
+                                       ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Nov 16 03:54:35 2025
+Sun Nov 16 04:30:16 2025

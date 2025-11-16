@@ -46,6 +46,20 @@ label artemis2:
     show artemis welcome at truecenter
     two "Welcome to the second labor. I'm Artemis, the Greek goddess of the wilderness."
     two "For this labor, I will test your knowledge of wildlife."
+    hide artemis
+    show deer part at Transform(xalign=0.5, yalign=0.5, zoom=3)
+    two "Identify the animal based on the picture shown above."
+    menu:
+        two "Identify the animal based on the picture shown above."
+        "Donkey":
+            two "Close one, but that's incorrect! You should pay more attention to nature."
+        "Deer":
+            show deer full at Transform(xalign=0.5, yalign=0.5, zoom=1)
+            two "You're right! It's clear that you are knowledgeable about animals."
+        "Dog":
+            two "Nice try, but that's incorrect! You should pay more attention to nature."
+        "Rabbit":
+            two "Not even close! You should pay more attention to nature."
 
 # 3. Parvati (Hindu goddess of beauty): [optical illusions](https://www.illusionsindex.org/i/all-is-vanity)
 label parvati3:
