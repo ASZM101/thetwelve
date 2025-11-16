@@ -65,28 +65,36 @@ label maat5:
             five "Excellent"
             jump maatJudge
 
-            $ judge = True
-        "I don't Know...":
+        "I don't think so...":
             five "ok then parish"
             return
 
     label maatJudge:
         five "2 roommates are having a dispute."
-        five "Roommate A feels like they are the only ones doing the dishes. Roommate B says that the dishes are not a big deal."
+        five "Roommate A feels like they are the only ones doing the dishes. Roommate B says that the dishes are not a big deal since they are busy with homework."
         menu:
             five "Who is in the right?"
             "Roommate A":
                 five "Correct. Plus 10 aura points."
             "Roommate B":
-                five "Incorrect. Negative 30000 aura points. You will now die."
+                five "Incorrect. Person A is in the right."
+                five "Negative 30000 aura points. You will now die."
                 return
         
-        five "A child steals a piece of candy from a store."
-
-        
-
-        
-
+        five "Person A and Person B are walking on the street. Person B accidentally bumps Person A."
+        five "Person A had a bad day. They just lost their job, their wife and their kids so they punche Person B for bumping into them."
+        five "This leads to Person B tackling A to the ground because a stranger just punched them for assumingly no reason which leads to a big fight."
+        five "Who is in the right?"
+        menu:
+            five "Who is in the right?"
+            "Person A":
+                five "Inccorect. Person B is in the right."
+            "Person B":
+                five "Correct"
+        five 'There is rarely a clear right and wrong answer. Whether you are in the "right" or in the "wrong" is... subjective.'
+        five "There are always 2 sides of the story."
+        five "And it is your job to listen to both sides in order to get the full truth."
+        five "You may now go to the next goddess on your journey.
 
 
 
