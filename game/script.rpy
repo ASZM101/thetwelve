@@ -13,7 +13,7 @@ define twelve = Character("Bellona")
 
 label start:
     scene bg greece0
-    show athena welcome
+    show athena welcome at truecenter
     one "Yo, you're dead."
     one "However, if you complete 12 labors from some goddesses, you can become a demi-god."
     one "You wanna be immortal? Now's your chance."
@@ -43,12 +43,14 @@ label athena1:
 # 2. Artemis (greek goddess of the wilderness): guess the animal based on only part of its body
 label artemis2:
     hide athena
-    show artemis welcome
+    show artemis welcome at truecenter
     two "Welcome to the second labor. I'm Artemis, the Greek goddess of the wilderness."
     two "For this labor, I will test your knowledge of wildlife."
 
 # 3. Parvati (Hindu goddess of beauty): [optical illusions](https://www.illusionsindex.org/i/all-is-vanity)
 label parvati3:
+    hide artemis
+    show parvati welcome at truecenter
     three "Welcome to the third labor. I'm Parvati, the Hind goddess of beauty."
 
 # 4. Guanyin (chinese buddhist goddess of mercy): If you’re on a sinking ship, and there’s one life jacket → use it, throw it away, give it to a kid
@@ -94,7 +96,7 @@ label maat5:
         five 'There is rarely a clear right and wrong answer. Whether you are in the "right" or in the "wrong" is... subjective.'
         five "There are always 2 sides of the story."
         five "And it is your job to listen to both sides in order to get the full truth."
-        five "You may now go to the next goddess on your journey.
+        five "You may now go to the next goddess on your journey."
 
 
 
@@ -294,9 +296,9 @@ label bellona12:
             $ score -=15
     python:
         while score > 0:
-            twelve "Keep fighting"
-        twelve "The mighty Manticore has been defeated!"
-        twelve "You really are worthy of becoming a demigod"
+            renpy.say(twelve, "Keep fighting")
+        renpy.say(twelve, "The mighty Manticore has been defeated!")
+        renpy.say(twelve, "You really are worthy of becoming a demigod")
 
 
 
