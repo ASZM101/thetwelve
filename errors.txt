@@ -2,6 +2,18 @@
 errors listed below, and try again.
 
 
+<<<<<<< HEAD
+File "game/script.rpy", line 139: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "A mushroom"
+                ^
+
+File "game/script.rpy", line 150: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "An eggplant"
+                 ^
+
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Sun Nov 16 03:44:19 2025
+=======
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -44,3 +56,4 @@ File "game/script.rpy", line 305: invalid syntax
 Ren'Py Version: Ren'Py 8.4.1.25072401
 Sun Nov 16 03:17:27 2025
 >>>>>>> Stashed changes
+>>>>>>> 60f28eef9826450b46239300cf15a80445f0c58e

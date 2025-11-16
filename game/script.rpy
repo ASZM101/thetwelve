@@ -163,6 +163,56 @@ label danu6:
 
     label guessPlant:
         #pictures and guess it 
+        #pic of a muchroom
+        six "What is this?"
+        menu:
+            six "What is this?"
+            "A cow?":
+                six "Huh?"
+                six "No"
+            "Hibiscus":
+                six "No."
+            "A mushroom":
+                six "Yes. And it is actually not a plant, it is a Fungi!"
+        
+        #pic of a rose
+        six "Next Question. What is this?"
+        menu:
+            six "What is this?"
+            "A tulip?":
+                six "Close"
+            "A rose":
+                six "No."
+            "An eggplant":
+                six "No buddy. Its not..."
+
+        #pic of an Avacado
+        six "What is this?"
+        menu:
+            six "What is this?"
+            "A rotissuri chicken":
+                six "You're not funny"
+                six "Negative 50 aura"
+            "Avocado":
+                six "YES"
+            "Lettue":
+                six "I'll give you half a point"
+
+        
+        #pic of a tomato
+        six "Last question. Is this a Fruit or a Vegetable?"
+        menu:
+            six "Is this a Fruit or a Vegetable?"
+            "Fruit":
+                six "YES"
+            "Vegetable":
+                six "No. It is atually a fruit"
+            "A rotissuri chicken":
+                six "You are getting on my nerves"
+                six "DIE NOW"
+                return
+        six "Nature is precious, as are all living things. Please protect it!"
+
 
 
 
@@ -233,18 +283,18 @@ label kannon8:
         "No":
             eight "We shall see..."
 
-    eight "you encounter a homeless person on the street. They look hungry and cold."
-    eight "luckily, you have a million dollars. What will you do? Be honest."
+    eight "You encounter a homeless person on the street. They look hungry and cold."
+    eight "Luckily, you have a million dollars. What will you do? Be honest."
 
     menu:
-        eight "luckily, you have a million dollars. What will you do? Be honest."
+        eight "Luckily, you have a million dollars. What will you do? Be honest."
         "Give them $20":
             eight "Interesting"
         "Give them $100":
             eight "Interesting"
         "Give them  $125,000 (1/8 of your money)":
             eight "Interesting"
-        "Give them All of your money":
+        "Give them all of your money":
             eight "YOU LIE"
             eight "But I shall show you mercy."
     
@@ -272,6 +322,7 @@ label kannon8:
 
 label kindness:
     eight "You should not only have compassion with others. You should have some for yourself as well."
+    eight "It is good to help others not when your neglecting your life. You have to strike a balance."
     eight "Let this guide your decisons as you venture further."
 
 
