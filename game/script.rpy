@@ -66,6 +66,17 @@ label parvati3:
     hide deer
     show parvati welcome at truecenter
     three "Welcome to the third labor. I'm Parvati, the Hind goddess of beauty."
+    three "For this next labor, I will be examining your perception of the world."
+    hide parvati
+    show illusion q1 at Transform(xalign=0.5, yalign=0.25, zoom=1.5)
+    three "What is the first thing that you see in this picture?"
+    menu:
+        three "What is the first thing that you see in this picture?"
+        "Woman":
+            three "Interesting! You may proceed to the next labor."
+        "Skull":
+            three "I can see that death is still on your mind. I'll make it quick and painless."
+            return
 
 # 4. Guanyin (chinese buddhist goddess of mercy): If you’re on a sinking ship, and there’s one life jacket → use it, throw it away, give it to a kid
 label guanyin4:
