@@ -12,8 +12,8 @@ define eleven = Character("Minerva")
 define twelve = Character("Bellona")
 
 label start:
-    scene bg room
-    show eileen happy
+    scene bg greece0
+    show athena welcome
 
     one "Yo, you're dead."
     one "However, if you complete 12 labors from some goddesses, you can become a demi-god."
