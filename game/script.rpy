@@ -50,17 +50,24 @@ label guanyin4:
 
 # 5. Ma'at (Egyptian goddess symbolizing justice): Mini game, you’re the judge of conflict arguments 
 label maat5:
+    five "Welcome to the fifth labor. I am Ma'at, the Egyptian goddess of truth, justice, and order."
     five "In order to succeed in life you need to settle disputes and maintain order."
     menu:
         five "Are you ready to be the seeker of justice?"
         "Yes":
             five "Excellent"
+            judge= True
+
         "I don't Know...":
             five "ok then parish"
             return
 
+    if judge:
+
+
 # 6. Danu (irish goddess of nature): guess the plant
 label danu6:
+    six "Welcome to the sixth labor. I'm Danu, the irish goddess of nature."
     six "I love plants! Which one is your favorite?"
     menu:
         "Uh. Flowers?":
@@ -86,6 +93,7 @@ label danu6:
 
 # 7. Saraswati (Hindu goddess, embodying arts): name the painting
 label saraswati7:
+    seven "Welcome to the seventh labor. I am Saraswati."
     seven "I am the Hindu goddess of art and knowledge. To test both, you have to name the paintings."
     menu:
         "I'm ready!":
@@ -96,7 +104,8 @@ label saraswati7:
 
 # 8. Kannon (Japanese buddhist  goddess of  compassion): If you get a million dollars → keep it, burn it, give it to charity
 label kannon8:
-    eight "Do you have compassion in your heart?"
+eight "Welcome to the eighth labor. I am Kannon, the Japanese buddhist goddess of compassion and mercy."
+    eight "Do you have compassion in your heart? \n Do you have love for others?"
     menu:
         "Yes":
             eight "We shall see."
