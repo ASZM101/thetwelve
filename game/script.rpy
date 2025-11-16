@@ -15,7 +15,6 @@ label start:
     scene bg greece0
     show athena welcome at truecenter
     one "Yo, you're dead."
-    jump bellona12 # REMOVE THIS (only for testing purposes)
     one "However, if you complete 12 labors from some goddesses, you can become a demi-god."
     one "You wanna be immortal? Now's your chance."
     menu:
@@ -36,10 +35,13 @@ label athena1:
         one "Imagine you're the commanding officer of a military troop. Your country was just bombed by an enemy nation. What are you gonna do??"
         "Bomb the enemy, obviously":
             one "Violent... I like it!"
+            jump artemis2
         "Negotiate a peace treaty":
             one "Boring... but honorable"
+            jump artemis2
         "Ask allies for advice":
             one "You can't even think for yourself? That doesn't sound much like a commanding officer."
+            jump artemis2
 
 # 2. Artemis (greek goddess of the wilderness): guess the animal based on only part of its body
 label artemis2:
@@ -54,15 +56,19 @@ label artemis2:
         two "Identify the animal based on the picture shown above."
         "Donkey":
             two "Close one, but that's incorrect! You should pay more attention to nature."
+            jump parvati3
         "Deer":
             show deer full at Transform(xalign=0.5, yalign=0.5, zoom=1)
             two "You're right! It's clear that you are knowledgeable about animals."
+            jump parvati3
         "Dog":
             two "Nice try, but that's incorrect! You should pay more attention to nature."
+            jump parvati3
         "Rabbit":
             two "Not even close! You should pay more attention to nature."
+            jump parvati3
 
-# 3. Parvati (Hindu goddess of beauty): [optical illusions](https://www.illusionsindex.org/i/all-is-vanity)
+# 3. Parvati (Hindu goddess of beauty): optical illusions
 label parvati3:
     hide deer
     show parvati welcome at truecenter
@@ -75,6 +81,7 @@ label parvati3:
         three "What is the first thing that you see in this picture?"
         "Woman":
             three "Interesting! You may proceed to the next labor."
+            jump guanyin4
         "Skull":
             three "I can see that death is still on your mind. I'll make it quick and painless."
             return
@@ -82,6 +89,7 @@ label parvati3:
 # 4. Guanyin (chinese buddhist goddess of mercy): If you’re on a sinking ship, and there’s one life jacket → use it, throw it away, give it to a kid
 label guanyin4:
     hide illusion
+    show guanyin welcome at truecenter
     four "Welcome to the fourth labor. I'm Guanyin, Chinese Buddhist goddess of mercy."
     four "Based on your answer, we will see the true measures of your heart."
     four "Here is the situation: if you are on a sinking ship with only one life jacket,would you keep it for yourself or give it to the little boy?"
@@ -96,6 +104,8 @@ label guanyin4:
 
 # 5. Ma'at (Egyptian goddess symbolizing justice): Mini game, you’re the judge of conflict arguments 
 label maat5:
+    hide guanyin
+    show maat welcome at truecenter
     five "Welcome to the fifth labor. I am Ma'at, the Egyptian goddess of truth, justice, and order."
     five "In order to succeed in life you need to settle disputes and maintain order."
     five "Are you ready to be the seeker of justice?"
@@ -103,44 +113,42 @@ label maat5:
         five "Are you ready to be the seeker of justice?"
         "Yes":
             five "Excellent"
-            jump maatJudge
 
         "I don't think so...":
             five "ok then parish"
             return
-
-    label maatJudge:
-        five "2 roommates are having a dispute."
-        five "Roommate A feels like they are the only ones doing the dishes. Roommate B says that the dishes are not a big deal since they are busy with homework."
+    five "2 roommates are having a dispute."
+    five "Roommate A feels like they are the only ones doing the dishes. Roommate B says that the dishes are not a big deal since they are busy with homework."
+    five "Who is in the right?"
+    menu:
         five "Who is in the right?"
-        menu:
-            five "Who is in the right?"
-            "Roommate A":
-                five "Correct. Plus 10 aura points."
-            "Roommate B":
-                five "Incorrect. Person A is in the right."
-                five "Negative 30000 aura points. You will now die."
-                return
-        
-        five "Person A and Person B are walking on the street. Person B accidentally bumps Person A."
-        five "Person A had a bad day. They just lost their job, their wife and their kids so they punch Person B for bumping into them."
-        five "This leads to Person B tackling A to the ground because a stranger just punched them for assumingly no reason which leads to a big fight."
+        "Roommate A":
+            five "Correct. Plus 10 aura points."
+        "Roommate B":
+            five "Incorrect. Person A is in the right."
+            five "Negative 30000 aura points. You will now die."
+            return
+    five "Person A and Person B are walking on the street. Person B accidentally bumps Person A."
+    five "Person A had a bad day. They just lost their job, their wife and their kids so they punch Person B for bumping into them."
+    five "This leads to Person B tackling A to the ground because a stranger just punched them for assumingly no reason which leads to a big fight."
+    five "Who is in the right?"
+    menu:
         five "Who is in the right?"
-        menu:
-            five "Who is in the right?"
-            "Person A":
-                five "Inccorect. Person B is in the right."
-            "Person B":
-                five "Correct"
-        five 'There is rarely a clear right and wrong answer. Whether you are in the "right" or in the "wrong" is... subjective.'
-        five "There are always 2 sides of the story."
-        five "And it is your job to listen to both sides in order to get the full truth."
-        five "You may now go to the next goddess on your journey."
-
-
+        "Person A":
+            five "Inccorect. Person B is in the right. Bye bye"
+            return
+        "Person B":
+            five "Correct"
+    five 'There is rarely a clear right and wrong answer. Whether you are in the "right" or in the "wrong" is... subjective.'
+    five "There are always 2 sides of the story."
+    five "And it is your job to listen to both sides in order to get the full truth."
+    five "You may now go to the next goddess on your journey."
+    jump danu6
 
 # 6. Danu (irish goddess of nature): guess the plant
 label danu6:
+    hide maat
+    show danu welcome at Transform(xalign=0.5, yalign=0.5, zoom=0.5)
     six "Welcome to the sixth labor. I'm Danu, the irish goddess of nature."
     six "I love plants! Which one is your favorite?"
     menu:
@@ -169,7 +177,7 @@ label danu6:
     six "Let's see if you're a true plant lover!"
 
     label guessPlant:
-        #pictures and guess it 
+        hide danu
         show mushroom at truecenter
         six "What is this?"
         menu:
@@ -221,40 +229,35 @@ label danu6:
                 six "DIE NOW"
                 return
         hide tomatos
+        show danu welcome at Transform(xalign=0.5, yalign=0.5, zoom=0.5)
         six "Nature is precious, as are all living things. Please protect it!"
-
-
-
-
+        jump saraswati7
 
 # 7. Saraswati (Hindu goddess, embodying arts): name the painting
 label saraswati7:
+    hide danu
+    show saraswati welcome at truecenter
     seven "Welcome to the seventh labor. I am Saraswati."
     seven "I am the Hindu goddess of art and knowledge. To test both, you have to name the paintings."
     menu:
         seven "I am the Hindu goddess of art and knowledge. To test both, you have to name the paintings."
         "I'm ready!":
-            jump guessPainting
+            seven "Awesome!"
         "I'm not ready!!!":
             seven "Ok then parish *Smites you* 67 67 67 "
             return
-
-label guessPainting:
     seven 'Who made the painting called "Girl With A Pearl Earring"?'
     menu:
         seven 'Who made the painting called "Girl With A Pearl Earring"?'
-
         "Leonardo da Vinci":
             seven "Bruh, no"
         "Claude Monet of course!":
             seven "You were so confident yet you were so wrong."
         "Johannes Vermeer?":
             seven "Yes!"
-    
     seven " Next question. Edward Hopper made what famous painting?"
     menu:
         seven " Next question. Edward Hopper made what famous painting?"
-
         "Nighthawks":
             seven "Correct!"
         "The Ninth Wave":
@@ -263,12 +266,10 @@ label guessPainting:
             return
         "The scream":
             seven "Nice try but no."
-    
     seven "Last question..."
     seven "What is my favorite painting?"
     menu:
         seven "What is my favorite painting?"
-
         "IDK":
             seven "Well. The correct answer is all of them!"
         "Trick question. It's all of them":
@@ -279,11 +280,14 @@ label guessPainting:
     seven "Beauty is everywhere in this world."
     seven "If you can realize that everyone and everything is capable of life and beauty, the world around you will be a brighter place."
     seven "Remember that as you go to your next quest."
+    jump kannon8
 
 
 
 # 8. Kannon (Japanese buddhist  goddess of  compassion): If you get a million dollars → keep it, burn it, give it to charity
 label kannon8:
+    hide saraswati
+    show kannon welcome at truecenter
     eight "Welcome to the eighth labor. I am Kannon, the Japanese buddhist goddess of compassion and mercy."
     eight "Do you have compassion in your heart? Do you have love for others?"
     menu:
@@ -327,6 +331,7 @@ label kannon8:
         eight "Lasty, did you drink water today?"
         "Yes":
             eight "Good"
+            jump amaterasu9
         "No":
             jump kindness
         "What does this have to do with anything?":
@@ -336,13 +341,12 @@ label kindness:
     eight "You should not only have compassion with others. You should have some for yourself as well."
     eight "It is good to help others not when your neglecting your life. You have to strike a balance."
     eight "Let this guide your decisons as you venture further."
-
-
-
-
+    jump amaterasu9
 
 # 9. Amaterasu (japanese Goddess of the Sun): Trivia about the Sun
-label amaterasu9:       
+label amaterasu9:   
+    hide kannon
+    show amaterasu welcome at truecenter
     $ score = 0
     nine "lets see how much you know about the Sun. If you know enough, I might let you move on"
     nine "first question, how old is the Sun?"
@@ -371,11 +375,15 @@ label amaterasu9:
            nine "You humans are ungrateful. Moving on . . ."
     if score>1:
         nine "congratulations! You are able to pass to the next level!"
+        jump seshat10
     else:
         "You have failed the test and will suffer a horrible fate. Sorry"
+        return
 
 # 10. Seshat (egyptian goddess of writing): Vocabulary (SAT level)
 label seshat10:
+    hide amaterasu
+    show seshat welcome at Transform(xalign=0.5, yalign=0.5, zoom=3)
     $ score=0
     ten "What someone knows affects their decisions. Prove your knowledge in this test and show your worth"
     ten "Your first question shall be . . . what is the definition of CAMADERIE?"
@@ -404,13 +412,18 @@ label seshat10:
             ten "We need to talk about your spelling"
     if score>1:
         ten "Yes! You have made it passed my vocabulary quiz and may go forward on your journey"
+        jump minerva11
     else:
         ten "Whomp Whomp. You're dead. Bye"
+        return
 
 # 11. Minerva (roman goddess of strategy): Chess board, choose best move
 label minerva11:
+    hide seshat
+    show minerva welcome at truecenter
     eleven "Welcome to the eleventh labor. I'm Minerva, the Roman goddess of strategy."
     eleven "For this second-to-last labor, I will test strategic thinking."
+    hide minerva
     show chess q1 at Transform(xalign=0.5, yalign=0.25, zoom=0.5)
     eleven "How should white escape the check?"
     menu:
@@ -422,22 +435,19 @@ label minerva11:
         "Queen to G5":
             eleven "Excellent! White captures the checking piece and wins a queen!"
     eleven "What we do in life must be based on strategy."
+    jump bellona12
 
 # 12. Bellona (oman goddess of war): Fight a monster using choices (stab, upper cut, punch, headlock)
-screen fightingMenu(options):
-    frame:
-        vbox:
-            for fightingOption, actionHandler in options:
-                textbutton fightingOption action Return(actionHandler)
-
 label bellona12:
     hide chess
+    show bellona welcome at truecenter
     $ monsterHealth= 500
     twelve "Nice work young soldier. You have passed on the tests. All but one"
-    twelve "You will now face your last opponent. The mighty Manticore!"
-    twelve "Here, the amount of aura that you have gained shall help or hinder the Manticore's defeat"
-    twelve "Good luck young soldier, and remember . . ."
-    twelve "I will ALWAYS have more aura than you"
+    twelve "You will now face your last opponent..."
+    hide bellona
+    show manticore ready at Transform(xalign=0.5, yalign=0.5, zoom=2)
+    twelve "The mighty Manticore!"
+    twelve "Good luck young soldier..."
     "How do you want to fight?"
     jump battle
 
@@ -452,6 +462,8 @@ label battle:
             jump upperCut
         "Punch":
             jump punch
+        "I don't wanna fight":
+            jump noFight
 
 label stab:
     $ monsterHealth -=40
@@ -489,7 +501,15 @@ label punch:
         else:
             renpy.jump("victory")
 
+label noFight:
+    hide manticore
+    show bellona welcome at truecenter
+    twelve "Well, too bad, so sad."
+    return
+
 label victory:
+    hide manticore
+    show bellona welcome at truecenter
     twelve "The mighty Manticore has been defeated!"
     twelve "You really are worthy of becoming a demigod"
     return
