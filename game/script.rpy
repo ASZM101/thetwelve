@@ -266,16 +266,16 @@ label bellona12:
     twelve "I will ALWAYS have more aura than you"
     menu:
         "stab":
-        $ score -=40
+            $ score -=40
     menu:
         "upper_cut":
-        $ score -=20
+            $ score -=20
     menu:
         "punch":
-        $ score -=15
+            $ score -=15
     menu:
         "headlock":
-        $ score -=40
+            $ score -=40
     if score<=0:
         twelve "The mighty Manticore has been defeated!"
         twelve "You really are worthy of becoming a demigod"
