@@ -286,20 +286,17 @@ label bellona12:
     menu:
         "stab":
             $ score -=40
-    menu:
-        "upper_cut":
-            $ score -=20
-    menu:
-        "punch":
-            $ score -=15
-    menu:
         "headlock":
             $ score -=40
-    if score<=0:
+        "upper_cut":
+            $ score -=20
+        "punch":
+            $ score -=15
+    python:
+        while score > 0:
+            twelve "Keep fighting"
         twelve "The mighty Manticore has been defeated!"
         twelve "You really are worthy of becoming a demigod"
-    else:
-        twelve"Keep FIGHTING"
 
 
 
