@@ -2,6 +2,7 @@
 errors listed below, and try again.
 
 
+<<<<<<< HEAD
 File "game/script.rpy", line 59: expected statement.
     judge= True
          ^
@@ -12,3 +13,11 @@ File "game/script.rpy", line 123: Line is indented, but the preceding say statem
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
 Sun Nov 16 01:33:46 2025
+=======
+File "game/script.rpy", line 124: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    menu:
+    ^
+
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Sun Nov 16 01:08:05 2025
+>>>>>>> 0fca79b74fa7c3e4caa394813117321659457464
