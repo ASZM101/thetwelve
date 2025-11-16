@@ -65,6 +65,21 @@ label maat5:
             return
 
     if judge:
+        five "2 roommates are having a dispute."
+        five "Roommate A feels like they are the only ones doing the dishes. Roommate B says that the dishes are not a big deal."
+        menu:
+            five "Who is in the right?"
+            "Roommate A":
+                five "Correct. Plus 10 aura points."
+            "Roommate B":
+                five "Incorrect. Negative 30000 aura points. You will now die."
+                return
+
+        
+
+        
+
+
 
 
 # 6. Danu (irish goddess of nature): guess the plant
