@@ -46,16 +46,40 @@ label artemis2:
     show artemis welcome at truecenter
     two "Welcome to the second labor. I'm Artemis, the Greek goddess of the wilderness."
     two "For this labor, I will test your knowledge of wildlife."
+    hide artemis
+    show deer part at Transform(xalign=0.5, yalign=0.5, zoom=3)
+    two "Identify the animal based on the picture shown above."
+    menu:
+        two "Identify the animal based on the picture shown above."
+        "Donkey":
+            two "Close one, but that's incorrect! You should pay more attention to nature."
+        "Deer":
+            show deer full at Transform(xalign=0.5, yalign=0.5, zoom=1)
+            two "You're right! It's clear that you are knowledgeable about animals."
+        "Dog":
+            two "Nice try, but that's incorrect! You should pay more attention to nature."
+        "Rabbit":
+            two "Not even close! You should pay more attention to nature."
 
 # 3. Parvati (Hindu goddess of beauty): [optical illusions](https://www.illusionsindex.org/i/all-is-vanity)
 label parvati3:
-    hide artemis
+    hide deer
     show parvati welcome at truecenter
     three "Welcome to the third labor. I'm Parvati, the Hind goddess of beauty."
 
 # 4. Guanyin (chinese buddhist goddess of mercy): If you’re on a sinking ship, and there’s one life jacket → use it, throw it away, give it to a kid
 label guanyin4:
     four "Welcome to the fourth labor. I'm Guanyin, Chinese Buddhist goddess of mercy."
+    four "Based on your answer, we will see the true measures of your heart."
+    four "Here is the situation: if you are on a sinking ship with only one life jacket,would you keep it for yourself or give it to the little boy?"
+    menu:
+        four "Here is the situation: if you are on a sinking ship with only one life jacket,would you keep it for yourself or give it to the little boy?"
+        "Nahh, thats for my personal use ONLY. NO Touching!":
+            four "Based on your decision, I cannot permit someone with a cruel heart to become one of us"
+            return
+        "Yes, I will help that little boy with a whole future ahead of him":
+            four "You have shown dignity and carelessness in your choice. You may proceed forward"
+            jump maat5
 
 # 5. Ma'at (Egyptian goddess symbolizing justice): Mini game, you’re the judge of conflict arguments 
 label maat5:
