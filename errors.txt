@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 124: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    menu:
-    ^
+File "game/script.rpy", line 151: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "The scream"
+                ^
+
+File "game/script.rpy", line 163: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    '“The Last Supper” by Francis Newton Souza'
+                                           ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Nov 16 01:08:05 2025
+Sun Nov 16 01:39:10 2025
