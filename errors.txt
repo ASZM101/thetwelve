@@ -2,21 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 268: choice menuitem expects a non-empty block.
-    "stab":
-           ^
-
-File "game/script.rpy", line 271: choice menuitem expects a non-empty block.
-    "upper_cut":
-                ^
-
-File "game/script.rpy", line 274: choice menuitem expects a non-empty block.
-    "punch":
-            ^
-
-File "game/script.rpy", line 277: choice menuitem expects a non-empty block.
-    "headlock":
-               ^
+File "game/script.rpy", line 97: unterminated string literal
+    five "You may now go to the next goddess on your journey.
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Nov 16 02:11:10 2025
+Sun Nov 16 02:35:55 2025
