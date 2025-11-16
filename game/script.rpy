@@ -134,6 +134,7 @@ label saraswati7:
             return
 
 label guessPainting:
+    seven 'Who made the painting called "Girl With A Pearl Earring"?'
     menu:
         seven 'Who made the painting called "Girl With A Pearl Earring"?'
 
@@ -141,23 +142,24 @@ label guessPainting:
             seven "Bruh, no"
         "Claude Monet of course!":
             seven "You were so confident yet you were so wrong."
-        
         "Johannes Vermeer?":
             seven "Yes!"
     
+    seven " Next question. Edward Hopper made what famous painting?"
     menu:
         seven " Next question. Edward Hopper made what famous painting?"
 
         "Nighthawks":
-            seven "correct!"
+            seven "Correct!"
         "The Ninth Wave":
             seven "Ew no."
             seven "You gotta die now"
             return
-        "The scream""
+        "The scream":
             seven "Nice try but no."
     
     seven "Last question..."
+    seven "What is my favorite painting?"
     menu:
         seven "What is my favorite painting?"
 
@@ -165,32 +167,19 @@ label guessPainting:
             seven "Well. The correct answer is all of them!"
         "Trick question. It's all of them":
             seven "Correct!"
-        '“The Last Supper” by Francis Newton Souza'
+        '“The Last Supper” by Francis Newton Souza':
             seven "That is a great painting but actually its all of them"
 
     seven "Beauty is everywhere in this world."
     seven "If you can realize that everyone and everything is capable of life and beauty. The world around you will be a brighter place."
-
-
-
-    
-
+    seven "Remember that as you go to your next quest."
 
 
 
 # 8. Kannon (Japanese buddhist  goddess of  compassion): If you get a million dollars → keep it, burn it, give it to charity
 label kannon8:
-eight "Welcome to the eighth labor. I am Kannon, the Japanese buddhist goddess of compassion and mercy."
-eight "Do you have compassion in your heart? Do you have love for others?"
-menu:
-    "Yes":
-         eight "We shall see."
-    "Yes?":
-        eight "You are  unsure of yourself. Nevertheless, we shall see."
-    "No":
-        eight "We shall see..."
     eight "Welcome to the eighth labor. I am Kannon, the Japanese buddhist goddess of compassion and mercy."
-    eight "Do you have compassion in your heart? \n Do you have love for others?"
+    eight "Do you have compassion in your heart? Do you have love for others?"
     menu:
         "Yes":
             eight "We shall see."
@@ -198,6 +187,10 @@ menu:
             eight "You are  unsure of yourself. Nevertheless, we shall see."
         "No":
             eight "We shall see..."
+
+    eight "you encounter a homeless person on the street"
+
+
 
 # 9. Amaterasu (japanese Goddess of the Sun): Trivia about the Sun
 label amaterasu9:       
