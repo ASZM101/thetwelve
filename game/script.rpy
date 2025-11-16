@@ -262,9 +262,46 @@ label seshat10:
 
 # 11. Minerva (roman goddess of strategy): Chess board, choose best move
 label minerva11:
-    eleven "What we do in life must be based on strategy. Choose the best move in Chess"
+    eleven "Welcome to the eleventh labor. I'm Minerva, the Roman goddess of strategy."
+    eleven "For this second-to-last labor, I will test strategic thinking."
+    eleven "How should white escape the check?"
+    menu:
+        eleven "How should white escape the check?"
+        "King to H1":
+            eleven "Black wins a queen. Tough luck!"
+        "Pawn to F4":
+            eleven "White is still in check. Gotta escape first!"
+        "Queen to G5":
+            eleven "Excellent! White captures the checking piece and wins a queen!"
+    eleven "What we do in life must be based on strategy."
 
 # 12. Bellona (oman goddess of war): Fight a monster using choices (stab, upper cut, punch, headlock)
 label bellona12:
-    twelve ""
+    $ score= 500
+    twelve "Nice work young soldier. You have passed on the tests. All but one"
+    twelve "You will now face your last opponent. The mighty manticore!"
+    twelve "Here, the amount of aura that you have gained shall help or hinder the Manticore's defeat"
+    twelve "Good luck young soldier, and remember . . ."
+    twelve "I will ALWAYS have more aura than you"
+    menu:
+        "stab":
+            $ score -=40
+    menu:
+        "upper_cut":
+            $ score -=20
+    menu:
+        "punch":
+            $ score -=15
+    menu:
+        "headlock":
+            $ score -=40
+    if score<=0:
+        twelve "The mighty Manticore has been defeated!"
+        twelve "You really are worthy of becoming a demigod"
+    else:
+        twelve"Keep FIGHTING"
+
+
+
+    
     return
