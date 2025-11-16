@@ -33,9 +33,10 @@ label choice0_quit:
     one "Well, I guess it's farewell forever."
     return
 
-# 1. Athena (greek god of battle strategy): If you are military sergeant, and your country is bald → Bald them, plead for a peace treaty, ask for allies
+# 1. Athena (greek god of battle strategy): If you are military sergeant, and your country is bomb → Bomb them, plead for a peace treaty, ask for allies
 label athena1:
-    one "Before we begin, let me first introduce myself. I'm Athena, the Greek goddesss of battle strategy."
+    one "Before we get started, I'll introduce myself first. I'm Athena, the Greek goddesss of battle strategy."
+    one "For your first labor, "
 
 # 2. Artemis (greek goddess of the wilderness): guess the animal
 label artemis2:
