@@ -15,6 +15,7 @@ label start:
     scene bg greece0
     show athena welcome at truecenter
     one "Yo, you're dead."
+    jump bellona12 # REMOVE THIS (only for testing purposes)
     one "However, if you complete 12 labors from some goddesses, you can become a demi-god."
     one "You wanna be immortal? Now's your chance."
     menu:
@@ -97,6 +98,7 @@ label guanyin4:
 label maat5:
     five "Welcome to the fifth labor. I am Ma'at, the Egyptian goddess of truth, justice, and order."
     five "In order to succeed in life you need to settle disputes and maintain order."
+    five "Are you ready to be the seeker of justice?"
     menu:
         five "Are you ready to be the seeker of justice?"
         "Yes":
@@ -110,6 +112,7 @@ label maat5:
     label maatJudge:
         five "2 roommates are having a dispute."
         five "Roommate A feels like they are the only ones doing the dishes. Roommate B says that the dishes are not a big deal since they are busy with homework."
+        five "Who is in the right?"
         menu:
             five "Who is in the right?"
             "Roommate A":
@@ -141,9 +144,11 @@ label danu6:
     six "Welcome to the sixth labor. I'm Danu, the irish goddess of nature."
     six "I love plants! Which one is your favorite?"
     menu:
+        six "I love plants! Which one is your favorite?"
         "Uh. Flowers?":
             six "Which kind?"
             menu:
+                six "Which kind?"
                 "um. the colorful kind?":
                     six "I don't like you *Smites you*"
                     return
@@ -154,6 +159,7 @@ label danu6:
         "I Love Trees!":
             six "Which kind?"
             menu:
+                six "Which kind?"
                 "Oak":
                     six "NICE"
                 "Willow":
@@ -180,7 +186,7 @@ label danu6:
         show rose at truecenter
         six "Next Question. What is this?"
         menu:
-            six "What is this?"
+            six "Next Question. What is this?"
             "A tulip?":
                 six "Close. It is a rose"
             "A rose":
@@ -205,7 +211,7 @@ label danu6:
         show tomatos at truecenter
         six "Last question. Is this a Fruit or a Vegetable?"
         menu:
-            six "Is this a Fruit or a Vegetable?"
+            six "Last question. Is this a Fruit or a Vegetable?"
             "Fruit":
                 six "YES"
             "Vegetable":
@@ -226,6 +232,7 @@ label saraswati7:
     seven "Welcome to the seventh labor. I am Saraswati."
     seven "I am the Hindu goddess of art and knowledge. To test both, you have to name the paintings."
     menu:
+        seven "I am the Hindu goddess of art and knowledge. To test both, you have to name the paintings."
         "I'm ready!":
             jump guessPainting
         "I'm not ready!!!":
@@ -280,6 +287,7 @@ label kannon8:
     eight "Welcome to the eighth labor. I am Kannon, the Japanese buddhist goddess of compassion and mercy."
     eight "Do you have compassion in your heart? Do you have love for others?"
     menu:
+        eight "Do you have compassion in your heart? Do you have love for others?"
         "Yes":
             eight "We shall see."
         "Yes?":
@@ -302,9 +310,9 @@ label kannon8:
             eight "YOU LIE"
             eight "But I shall show you mercy."
     
-    eight "Your best friend is moving into a new apartment. Do you help them move out of their old apartment?"
+    eight "Your best friend is moving into a new apartment. Do you help them move out of their old apartment? And remember, be honest."
     menu:
-        eight "Do you help them move out? And remember, be honest."
+        eight "Your best friend is moving into a new apartment. Do you help them move out of their old apartment? And remember, be honest."
         "Of course, they are my friend. Even if I'm busy, I will always help them.":
             eight "Ok"
         "Sure, Im not doing anything right now.":
@@ -339,6 +347,7 @@ label amaterasu9:
     nine "lets see how much you know about the Sun. If you know enough, I might let you move on"
     nine "first question, how old is the Sun?"
     menu: 
+        nine "first question, how old is the Sun?"
         "6-7 billion years":
            "Incorrect. Lets try another" 
         "4.5 billion years":
@@ -346,6 +355,7 @@ label amaterasu9:
             $ score +=1
     nine "next question, how long does it take the sun to rotate on its axis?"
     menu:
+        nine "next question, how long does it take the sun to rotate on its axis?"
         "27 days": 
             nine"Correct, one more!"
             $ score +=1
@@ -353,6 +363,7 @@ label amaterasu9:
             nine"Incorrect, Try one more time"
     nine "last question, do you love Mr.Sun?"
     menu:
+        nine "last question, do you love Mr.Sun?"
         "Yes":
            nine"Thank you for not putting no. You don't know how many people put that answer"
            $ score +=1 
@@ -369,6 +380,7 @@ label seshat10:
     ten "What someone knows affects their decisions. Prove your knowledge in this test and show your worth"
     ten "Your first question shall be . . . what is the definition of CAMADERIE?"
     menu:
+        ten "Your first question shall be . . . what is the definition of CAMADERIE?"
         "social and friendly":
             ten "Correct!!!Keep going"
             $ score +=1
@@ -376,6 +388,7 @@ label seshat10:
             ten "No, do better"
     ten "Next question! What does ACCOLADE mean?"
     menu:
+        ten "Next question! What does ACCOLADE mean?"
         "Harsh and mean":
             ten"Incorrect; I am NOT accolade when I say that this is why your grades are so low"
         "Praise and attention":
@@ -383,6 +396,7 @@ label seshat10:
             $ score +=1
     ten "The Big question . . . What does IDK mean?!"
     menu:
+        ten "The Big question . . . What does IDK mean?!"
         "I Don't Know":
             ten "Actually, I Don't Kare! HA . . Just kidding, I'll give it to you"
             $ score +=1
@@ -397,6 +411,7 @@ label seshat10:
 label minerva11:
     eleven "Welcome to the eleventh labor. I'm Minerva, the Roman goddess of strategy."
     eleven "For this second-to-last labor, I will test strategic thinking."
+    show chess q1 at Transform(xalign=0.5, yalign=0.25, zoom=0.5)
     eleven "How should white escape the check?"
     menu:
         eleven "How should white escape the check?"
@@ -409,29 +424,72 @@ label minerva11:
     eleven "What we do in life must be based on strategy."
 
 # 12. Bellona (oman goddess of war): Fight a monster using choices (stab, upper cut, punch, headlock)
+screen fightingMenu(options):
+    frame:
+        vbox:
+            for fightingOption, actionHandler in options:
+                textbutton fightingOption action Return(actionHandler)
+
 label bellona12:
-    $ score= 500
+    hide chess
+    $ monsterHealth= 500
     twelve "Nice work young soldier. You have passed on the tests. All but one"
-    twelve "You will now face your last opponent. The mighty manticore!"
+    twelve "You will now face your last opponent. The mighty Manticore!"
     twelve "Here, the amount of aura that you have gained shall help or hinder the Manticore's defeat"
     twelve "Good luck young soldier, and remember . . ."
     twelve "I will ALWAYS have more aura than you"
+    "How do you want to fight?"
+    jump battle
+
+label battle:
     menu:
-        "stab":
-            $ score -=40
-        "headlock":
-            $ score -=40
-        "upper_cut":
-            $ score -=20
-        "punch":
-            $ score -=15
+        "How do you want to fight?"
+        "Stab":
+            jump stab
+        "Headlock":
+            jump headlock
+        "Upper cut":
+            jump upperCut
+        "Punch":
+            jump punch
+
+label stab:
+    $ monsterHealth -=40
+    "The Manticore just lost 40 health points! It has [monsterHealth if monsterHealth > 0 else 0] health left!"
     python:
-        while score > 0:
-            renpy.say(twelve, "Keep fighting")
-        renpy.say(twelve, "The mighty Manticore has been defeated!")
-        renpy.say(twelve, "You really are worthy of becoming a demigod")
+        if monsterHealth > 0:
+            renpy.jump("battle")
+        else:
+            renpy.jump("victory")
 
+label headlock:
+    $ monsterHealth -=40
+    "The Manticore just lost 40 health points! It has [monsterHealth if monsterHealth > 0 else 0] health left!"
+    python:
+        if monsterHealth > 0:
+            renpy.jump("battle")
+        else:
+            renpy.jump("victory")
 
+label upperCut:
+    $ monsterHealth -=20
+    "The Manticore just lost 20 health points! It has [monsterHealth if monsterHealth > 0 else 0] health left!"
+    python:
+        if monsterHealth > 0:
+            renpy.jump("battle")
+        else:
+            renpy.jump("victory")
 
-    
+label punch:
+    $ monsterHealth -=15
+    "The Manticore just lost 15 health points! It has [monsterHealth if monsterHealth > 0 else 0] health left!"
+    python:
+        if monsterHealth > 0:
+            renpy.jump("battle")
+        else:
+            renpy.jump("victory")
+
+label victory:
+    twelve "The mighty Manticore has been defeated!"
+    twelve "You really are worthy of becoming a demigod"
     return

@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 84: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    four "Welcome to the fourth labor. I'm Guanyin, Chinese Buddhist goddess of mercy."
-    ^
+File "game/script.rpy", line 456: expected statement.
+    renpy.say(None, "Bellona just lost 40 health points!")
+                                                          ^
+
+File "game/script.rpy", line 460: expected statement.
+    renpy.say(None, "Bellona just lost 40 health points!")
+                                                          ^
+
+File "game/script.rpy", line 464: expected statement.
+    renpy.say(None, "Bellona just lost 20 health points!")
+                                                          ^
+
+File "game/script.rpy", line 468: expected statement.
+    renpy.say(None, "Bellona just lost 15 health points!")
+                                                          ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Nov 16 05:06:05 2025
+Sun Nov 16 06:44:40 2025
