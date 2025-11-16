@@ -189,19 +189,19 @@ label danu6:
                 six "No buddy. Its not..."
 
         hide rose
-        show Avocadoss at truecenter
+        show kiwi at truecenter
         six "What is this?"
         menu:
             six "What is this?"
             "A rotissuri chicken":
                 six "You're not funny"
                 six "Negative 50 aura"
-            "Avocado":
+            "Kiwi":
                 six "YES"
             "Lettue":
                 six "I'll give you half a point"
 
-        hide Avocadoss
+        hide kiwi
         show tomatos at truecenter
         six "Last question. Is this a Fruit or a Vegetable?"
         menu:
