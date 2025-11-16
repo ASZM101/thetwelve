@@ -18,27 +18,34 @@ label start:
     one "However, if you complete 12 labors from some goddesses, you can become a demi-god."
     one "You wanna be immortal? Now's your chance."
     menu:
+        one "You wanna be immortal? Now's your chance."
         "Attempt the 12 labors":
-            jump choice0_try
+            one "Good luck!"
+            jump athena1
         "Not even gonna try":
-            jump choice0_quit
+            one "Well, I guess it's farewell forever."
+            return
 
-label choice0_try:
-    one "Good luck!"
-    jump athena1
-
-label choice0_quit:
-    one "Well, I guess it's farewell forever."
-    return
-
-# 1. Athena (greek god of battle strategy): If you are military sergeant, and your country is bomb → Bomb them, plead for a peace treaty, ask for allies
+# 1. Athena (greek god of battle strategy): If you are military sergeant, and your country is bombed → Bomb them, plead for a peace treaty, ask for allies
 label athena1:
     one "Before we get started, I'll introduce myself first. I'm Athena, the Greek goddesss of battle strategy."
-    one "For your first labor, "
+    one "For your first labor, I'm gonna test your strategic thinking in battle."
+    one "Imagine you're the commanding officer of a military troop. Your country was just bombed by an enemy nation. What are you gonna do??"
+    menu:
+        one "Imagine you're the commanding officer of a military troop. Your country was just bombed by an enemy nation. What are you gonna do??"
+        "Bomb the enemy, obviously":
+            one "Violent... I like it!"
+        "Negotiate a peace treaty":
+            one "Boring... but honorable"
+        "Ask allies for advice":
+            one "You can't even think for yourself? That doesn't sound much like a commanding officer."
 
-# 2. Artemis (greek goddess of the wilderness): guess the animal
+# 2. Artemis (greek goddess of the wilderness): guess the animal based on only part of its body
 label artemis2:
+    hide athena
+    show artemis welcome
     two "Welcome to the second labor. I'm Artemis, the Greek goddess of the wilderness."
+    two "For this labor, I will test your knowledge of wildlife."
 
 # 3. Parvati (Hindu goddess of beauty): [optical illusions](https://www.illusionsindex.org/i/all-is-vanity)
 label parvati3:
@@ -58,6 +65,7 @@ label maat5:
             five "Excellent"
             jump maatJudge
 
+            $ judge = True
         "I don't Know...":
             five "ok then parish"
             return
@@ -179,6 +187,15 @@ label kannon8:
         eight "You are  unsure of yourself. Nevertheless, we shall see."
     "No":
         eight "We shall see..."
+    eight "Welcome to the eighth labor. I am Kannon, the Japanese buddhist goddess of compassion and mercy."
+    eight "Do you have compassion in your heart? \n Do you have love for others?"
+    menu:
+        "Yes":
+            eight "We shall see."
+        "Yes?":
+            eight "You are  unsure of yourself. Nevertheless, we shall see."
+        "No":
+            eight "We shall see..."
 
     eight "you encounter a homeless person on the street"
 
