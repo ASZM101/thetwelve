@@ -1,0 +1,14 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 59: expected statement.
+    judge= True
+         ^
+
+File "game/script.rpy", line 123: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    eight "Do you have compassion in your heart? \n Do you have love for others?"
+    ^
+
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Sun Nov 16 01:33:46 2025
