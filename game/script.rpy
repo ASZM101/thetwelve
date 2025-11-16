@@ -80,6 +80,7 @@ label parvati3:
 
 # 4. Guanyin (chinese buddhist goddess of mercy): If you’re on a sinking ship, and there’s one life jacket → use it, throw it away, give it to a kid
 label guanyin4:
+    hide illusion
     four "Welcome to the fourth labor. I'm Guanyin, Chinese Buddhist goddess of mercy."
     four "Based on your answer, we will see the true measures of your heart."
     four "Here is the situation: if you are on a sinking ship with only one life jacket,would you keep it for yourself or give it to the little boy?"
