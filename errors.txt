@@ -2,9 +2,42 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 124: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    menu:
+<<<<<<< HEAD
+<<<<<<< HEAD
+File "game/script.rpy", line 59: expected statement.
+    judge= True
+         ^
+
+File "game/script.rpy", line 123: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    eight "Do you have compassion in your heart? \n Do you have love for others?"
     ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
+Sun Nov 16 01:33:46 2025
+=======
+File "game/script.rpy", line 124: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+=======
+File "game/script.rpy", line 183: menu statement expects a non-empty block.
+>>>>>>> 2dc3ca21b331844db0069c5deb878f571f11efe6
+    menu:
+        ^
+
+File "game/script.rpy", line 184: expected statement.
+    "Yes":
+         ^
+
+File "game/script.rpy", line 186: expected statement.
+    "Yes?":
+          ^
+
+File "game/script.rpy", line 188: expected statement.
+    "No":
+        ^
+
+Ren'Py Version: Ren'Py 8.4.1.25072401
+<<<<<<< HEAD
 Sun Nov 16 01:08:05 2025
+>>>>>>> 0fca79b74fa7c3e4caa394813117321659457464
+=======
+Sun Nov 16 01:48:51 2025
+>>>>>>> 2dc3ca21b331844db0069c5deb878f571f11efe6
