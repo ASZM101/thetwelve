@@ -70,6 +70,15 @@ label parvati3:
 # 4. Guanyin (chinese buddhist goddess of mercy): If you’re on a sinking ship, and there’s one life jacket → use it, throw it away, give it to a kid
 label guanyin4:
     four "Welcome to the fourth labor. I'm Guanyin, Chinese Buddhist goddess of mercy."
+    four "Based on your answer, we will see the true measures of your heart"
+    four "Here is the situation: if you are on a sinking ship with only one life jacket,would you keep it for yourself or give it to the little boy?"
+    menu:
+        "Nahh, thats for my personal use ONLY. NO Touching!":
+            four "Based on your decision, I cannot permit someone with a cruel heart to become one of us"
+            return
+        "Yes, I will help that little boy with a whole future ahead of him":
+            four "You have shown dignity and carelessness in your choice. You may proceed forward"
+            jump maat5
 
 # 5. Ma'at (Egyptian goddess symbolizing justice): Mini game, you’re the judge of conflict arguments 
 label maat5:
@@ -98,7 +107,7 @@ label maat5:
                 return
         
         five "Person A and Person B are walking on the street. Person B accidentally bumps Person A."
-        five "Person A had a bad day. They just lost their job, their wife and their kids so they punche Person B for bumping into them."
+        five "Person A had a bad day. They just lost their job, their wife and their kids so they punch Person B for bumping into them."
         five "This leads to Person B tackling A to the ground because a stranger just punched them for assumingly no reason which leads to a big fight."
         five "Who is in the right?"
         menu:
@@ -195,7 +204,7 @@ label guessPainting:
             seven "That is a great painting but actually its all of them"
 
     seven "Beauty is everywhere in this world."
-    seven "If you can realize that everyone and everything is capable of life and beauty. The world around you will be a brighter place."
+    seven "If you can realize that everyone and everything is capable of life and beauty, the world around you will be a brighter place."
     seven "Remember that as you go to your next quest."
 
 
@@ -212,7 +221,48 @@ label kannon8:
         "No":
             eight "We shall see..."
 
-    eight "you encounter a homeless person on the street"
+    eight "you encounter a homeless person on the street. They look hungry and cold."
+    eight "luckily, you have a million dollars. What will you do? Be honest."
+
+    menu:
+        eight "luckily, you have a million dollars. What will you do? Be honest."
+        "Give them $20":
+            eight "Interesting"
+        "Give them $100":
+            eight "Interesting"
+        "Give them  $125,000 (1/8 of your money)":
+            eight "Interesting"
+        "Give them All of your money":
+            eight "YOU LIE"
+            eight "But I shall show you mercy."
+    
+    eight "Your best friend is moving into a new apartment. Do you help them move out of their old apartment?"
+    menu:
+        eight "Do you help them move out? And remember, be honest."
+        "Of course, they are my friend. Even if I'm busy, I will always help them.":
+            eight "Ok"
+        "Sure, Im not doing anything right now.":
+            eight "Ok"
+        "No, sorry I'm really busy, and I have no time.":
+            eight "Ok"
+        "NO. I really don't want to.":
+            eight "Ok"
+
+    eight "Lasty, did you drink water today?"
+    menu:
+        eight "Lasty, did you drink water today?"
+        "Yes":
+            eight "Good"
+        "No":
+            jump kindness
+        "What does this have to do with anything?":
+            jump kindness
+
+label kindness:
+    eight "You should not only have compassion with others. You should have some for yourself as well."
+    eight "Let this guide your decisons as you venture further."
+
+
 
 
 
