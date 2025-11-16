@@ -4,6 +4,7 @@ errors listed below, and try again.
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 File "game/script.rpy", line 97: unterminated string literal
     five "You may now go to the next goddess on your journey.
@@ -18,6 +19,14 @@ File "game/script.rpy", line 299: invalid syntax
 Ren'Py Version: Ren'Py 8.4.1.25072401
 Sun Nov 16 03:54:35 2025
 >>>>>>> 69f2e46e24cd76ec1a081919c73eaf6c099bb526
+=======
+File "game/script.rpy", line 305: invalid syntax
+    twelve "Keep fighting"
+                   ^^^^^^^^^^^^^^^
+
+Ren'Py Version: Ren'Py 8.4.1.25072401
+Sun Nov 16 03:17:27 2025
+>>>>>>> Stashed changes
 =======
 File "game/script.rpy", line 305: invalid syntax
     twelve "Keep fighting"
