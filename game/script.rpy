@@ -56,13 +56,13 @@ label maat5:
         five "Are you ready to be the seeker of justice?"
         "Yes":
             five "Excellent"
-            judge= True
+            jump maatJudge
 
         "I don't Know...":
             five "ok then parish"
             return
 
-    if judge:
+    label maatJudge:
         five "2 roommates are having a dispute."
         five "Roommate A feels like they are the only ones doing the dishes. Roommate B says that the dishes are not a big deal."
         menu:
@@ -72,6 +72,8 @@ label maat5:
             "Roommate B":
                 five "Incorrect. Negative 30000 aura points. You will now die."
                 return
+        
+        five "A child steals a piece of candy from a store."
 
         
 
@@ -106,28 +108,79 @@ label danu6:
                     six "Interesting"
     six "Let's see if you're a true plant lover!"
 
+    label guessPlant:
+        #pictures and guess it 
+
+
+
+
 # 7. Saraswati (Hindu goddess, embodying arts): name the painting
 label saraswati7:
     seven "Welcome to the seventh labor. I am Saraswati."
     seven "I am the Hindu goddess of art and knowledge. To test both, you have to name the paintings."
     menu:
         "I'm ready!":
-            "jump guessPainting"
+            jump guessPainting
         "I'm not ready!!!":
             seven "Ok then parish *Smites you* 67 67 67 "
             return
 
+label guessPainting:
+    menu:
+        seven 'Who made the painting called "Girl With A Pearl Earring"?'
+
+        "Leonardo da Vinci":
+            seven "Bruh, no"
+        "Claude Monet of course!":
+            seven "You were so confident yet you were so wrong."
+        
+        "Johannes Vermeer?":
+            seven "Yes!"
+    
+    menu:
+        seven " Next question. Edward Hopper made what famous painting?"
+
+        "Nighthawks":
+            seven "correct!"
+        "The Ninth Wave":
+            seven "Ew no."
+            seven "You gotta die now"
+            return
+        "The scream""
+            seven "Nice try but no."
+    
+    seven "Last question..."
+    menu:
+        seven "What is my favorite painting?"
+
+        "IDK":
+            seven "Well. The correct answer is all of them!"
+        "Trick question. It's all of them":
+            seven "Correct!"
+        '“The Last Supper” by Francis Newton Souza'
+            seven "That is a great painting but actually its all of them"
+
+    seven "Beauty is everywhere in this world."
+    seven "If you can realize that everyone and everything is capable of life and beauty. The world around you will be a brighter place."
+
+
+
+    
+
+
+
+
 # 8. Kannon (Japanese buddhist  goddess of  compassion): If you get a million dollars → keep it, burn it, give it to charity
 label kannon8:
 eight "Welcome to the eighth labor. I am Kannon, the Japanese buddhist goddess of compassion and mercy."
-    eight "Do you have compassion in your heart? \n Do you have love for others?"
-    menu:
-        "Yes":
-            eight "We shall see."
-        "Yes?":
-            eight "You are  unsure of yourself. Nevertheless, we shall see."
-        "No":
-            eight "We shall see..."
+eight "Do you have compassion in your heart? Do you have love for others?"
+menu:
+    "Yes":
+         eight "We shall see."
+    "Yes?":
+        eight "You are  unsure of yourself. Nevertheless, we shall see."
+    "No":
+        eight "We shall see..."
 
 # 9. Amaterasu (japanese Goddess of the Sun): Trivia about the Sun
 label amaterasu9:       
