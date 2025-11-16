@@ -2,17 +2,13 @@
 errors listed below, and try again.
 
 
-<<<<<<< HEAD
-File "game/script.rpy", line 97: unterminated string literal
-    five "You may now go to the next goddess on your journey.
+File "game/script.rpy", line 139: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "A mushroom"
+                ^
+
+File "game/script.rpy", line 150: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "An eggplant"
+                 ^
 
 Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Nov 16 02:35:55 2025
-=======
-File "game/script.rpy", line 299: invalid syntax
-    twelve "Keep fighting"
-                   ^^^^^^^^^^^^^^^
-
-Ren'Py Version: Ren'Py 8.4.1.25072401
-Sun Nov 16 03:54:35 2025
->>>>>>> 69f2e46e24cd76ec1a081919c73eaf6c099bb526
+Sun Nov 16 03:44:19 2025
