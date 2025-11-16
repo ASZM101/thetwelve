@@ -152,7 +152,7 @@ label danu6:
 
     label guessPlant:
         #pictures and guess it 
-        #pic of a muchroom
+        show mushroom at truecenter
         six "What is this?"
         menu:
             six "What is this?"
@@ -164,18 +164,20 @@ label danu6:
             "A mushroom":
                 six "Yes. And it is actually not a plant, it is a Fungi!"
         
-        #pic of a rose
+        hide mushroom
+        show rose at truecenter
         six "Next Question. What is this?"
         menu:
             six "What is this?"
             "A tulip?":
-                six "Close"
+                six "Close. It is a rose"
             "A rose":
-                six "No."
+                six "Yes!"
             "An eggplant":
                 six "No buddy. Its not..."
 
-        #pic of an Avacado
+        hide rose
+        show Avocadoss at truecenter
         six "What is this?"
         menu:
             six "What is this?"
@@ -187,8 +189,8 @@ label danu6:
             "Lettue":
                 six "I'll give you half a point"
 
-        
-        #pic of a tomato
+        hide Avocadoss
+        show tomatos at truecenter
         six "Last question. Is this a Fruit or a Vegetable?"
         menu:
             six "Is this a Fruit or a Vegetable?"
@@ -200,6 +202,7 @@ label danu6:
                 six "You are getting on my nerves"
                 six "DIE NOW"
                 return
+        hide tomatos
         six "Nature is precious, as are all living things. Please protect it!"
 
 
