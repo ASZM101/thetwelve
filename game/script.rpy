@@ -14,14 +14,12 @@ define twelve = Character("Bellona")
 label start:
     scene bg greece0
     show athena welcome
-
     one "Yo, you're dead."
     one "However, if you complete 12 labors from some goddesses, you can become a demi-god."
     one "You wanna be immortal? Now's your chance."
     menu:
         "Attempt the 12 labors":
             jump choice0_try
-
         "Not even gonna try":
             jump choice0_quit
 
@@ -57,7 +55,6 @@ label maat5:
         five "Are you ready to be the seeker of justice?"
         "Yes":
             five "Excellent"
-
         "I don't Know...":
             five "ok then parish"
             return
@@ -72,25 +69,19 @@ label danu6:
                 "um. the colorful kind?":
                     six "I don't like you *Smites you*"
                     return
-
                 "Chrysanthemum!":
                     six "Nice! Me Too!"
-
                 "Lavender!":
                     six "Cool!"
-
         "I Love Trees!":
             six "Which kind?"
             menu:
                 "Oak":
                     six "NICE"
-
                 "Willow":
                     six "Me Too!"
-
                 "Coconut":
                     six "Interesting"
-
     six "Let's see if you're a true plant lover!"
 
 # 7. Saraswati (Hindu goddess, embodying arts): name the painting
@@ -99,7 +90,6 @@ label saraswati7:
     menu:
         "I'm ready!":
             "jump guessPainting"
-
         "I'm not ready!!!":
             seven "Ok then parish *Smites you* 67 67 67 "
             return
@@ -110,25 +100,22 @@ label kannon8:
     menu:
         "Yes":
             eight "We shall see."
-        
         "Yes?":
             eight "You are  unsure of yourself. Nevertheless, we shall see."
-
         "No":
             eight "We shall see..."
 
-label trial_8:       
+# 9. Amaterasu (japanese Goddess of the Sun): Trivia about the Sun
+label amaterasu9:       
     $ score = 0
     nine "lets see how much you know about the Sun. If you know enough, I might let you move on"
     nine "first question, how old is the Sun?"
     menu: 
         "6-7 billion years":
            "Incorrect. Lets try another" 
-
         "4.5 billion years":
             "CORRECT. Keep going!"
             $ score +=1
-
     nine "next question, how long does it take the sun to rotate on its axis?"
     menu:
         "27 days": 
@@ -136,7 +123,6 @@ label trial_8:
             $ score +=1
         "18 days":
             nine"Incorrect, Try one more time"
-
     nine "last question, do you love Mr.Sun?"
     menu:
         "Yes":
@@ -149,8 +135,8 @@ label trial_8:
     else:
         "You have failed the test and will suffer a horrible fate. Sorry"
 
-
-label trial_9:
+# 10. Seshat (egyptian goddess of writing): Vocabulary (SAT level)
+label seshat10:
     $ score=0
     ten "What someone knows affects their decisions. Prove your knowledge in this test and show your worth"
     ten "Your first question shall be . . . what is the definition of CAMADERIE?"
@@ -177,15 +163,13 @@ label trial_9:
     if score>1:
         ten "Yes! You have made it passed my vocabulary quiz and may go forward on your journey"
     else:
-        ten "Whomp Whomp. Your dead. Bye"
-    eleven "What we do in life must be based on strategy. Choose the best move in Chess"
-    twelve""
+        ten "Whomp Whomp. You're dead. Bye"
 
-    # This ends the game.
-
-    return
-
-# 9. Amaterasu (japanese Goddess of the Sun): Trivia about the Sun
-# 10. Seshat (egyptian goddess of writing): Vocabulary (SAT level)
 # 11. Minerva (roman goddess of strategy): Chess board, choose best move
+label minerva11:
+    eleven "What we do in life must be based on strategy. Choose the best move in Chess"
+
 # 12. Bellona (oman goddess of war): Fight a monster using choices (stab, upper cut, punch, headlock)
+label bellona12:
+    twelve ""
+    return
